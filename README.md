@@ -14,9 +14,6 @@ A simple web-based Student Management System developed using:
 - View students
 - Add students
 - Search students
-- (Coming soon) Edit students
-- (Coming soon) Delete students
-- (Coming soon) Form validation
 
 ## Installation
 
