@@ -8,6 +8,16 @@
     <a href="/students/add">Add Student</a>
     <hr>
     <h2>Student List</h2>
+    <form action="/students/search" method="GET">
+    <input
+        type="text"
+        name="keyword"
+        placeholder="Search student..."
+    >
+    <button type="submit">
+        Search
+    </button>
+    </form>
     <table border="1" cellpadding="10">
         <tr>
             <th>ID</th>
@@ -19,7 +29,6 @@
         </tr>
 
         <% students.forEach(student => { %>
-
             <tr>
                 <td><%= student.id %></td>
                 <td><%= student.student_id %></td>
@@ -33,16 +42,7 @@
             </tr>
         <% }); %>
     </table>
+
 </body>
 </html>
 
-<form action="/students/search" method="GET">
-    <input
-        type="text"
-        name="keyword"
-        placeholder="Search student..."
-    >
-    <button type="submit">
-        Search
-    </button>
-</form>
