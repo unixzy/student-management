@@ -1,47 +1,30 @@
 # Student Management System
-
 A simple web-based Student Management System developed using:
-
 - Node.js
 - Express.js
 - EJS
 - MySQL
 - Git
 - GitHub
-
+  
 ## Features
-
 - View students
 - Add students
+- Edit students
+- Delete students
 - Search students
-
+- Form validation
 ## Installation
-
 Clone the repository:
-
-```bash
-git clone https://github.com/unixzy/student-management.git
-```
-
+git clone YOUR_REPOSITORY_URL
 Install dependencies:
-
-```bash
 npm install
-```
-
-Create the database:
-
-1. Start Apache and MySQL in XAMPP.
-2. Open phpMyAdmin and create the `student_management` database and `students` table using the SQL script from the activity.
-
-Configure the database connection in `app.js`.
-
+Create the database.
+Configure the database connection.
 Run:
-
-```bash
 node app.js
-```
-
+Open:
+http://localhost:3000
 Open in your browser:
 
 ```text
