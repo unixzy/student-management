@@ -31,6 +31,7 @@
             <th>Course</th>
             <th>Year</th>
             <th>Email</th>
+            <th>Actions</th>
           </tr>
           <% students.forEach(student => { %>
           <tr>
@@ -40,6 +41,12 @@
             <td><%= student.course %></td>
             <td><%= student.year_level %></td>
             <td><%= student.email %></td>
+            <td>
+            <form class="inline-form" action="/students/delete/<%= student.id %>" method="POST"
+                    onsubmit="return confirm('Delete this student?');">
+                <button class="btn btn-danger btn-small" type="submit">Delete</button>
+            </form>
+            </td>
           </tr>
           <% }); %>
         </table>
