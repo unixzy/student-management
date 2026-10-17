@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Management</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+  <header class="navbar">
     <h1>Student Management System</h1>
-    <a href="/students/add">Add Student</a>
-    <hr>
-    <h2>Student List</h2>
-    <table border="1" cellpadding="10">
-        <tr>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <form class="search-form" action="/students/search" method="GET">
+        <input type="text" name="keyword" placeholder="Search student...">
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <a class="btn" href="/students/add">Add Student</a>
+    </div>
+
+    <div class="card">
+      <h2>Student List</h2>
+      <div class="table-wrapper">
+        <table>
+          <tr>
             <th>ID</th>
             <th>Student ID</th>
             <th>Name</th>
             <th>Course</th>
             <th>Year</th>
             <th>Email</th>
-        </tr>
-
-        <% students.forEach(student => { %>
-
-            <tr>
-                <td><%= student.id %></td>
-                <td><%= student.student_id %></td>
-                <td>
-                    <%= student.first_name %>
-                    <%= student.last_name %>
-                </td>
-                <td><%= student.course %></td>
-                <td><%= student.year_level %></td>
-                <td><%= student.email %></td>
-            </tr>
-        <% }); %>
-    </table>
+          </tr>
+          <% students.forEach(student => { %>
+          <tr>
+            <td><%= student.id %></td>
+            <td><%= student.student_id %></td>
+            <td><%= student.first_name %> <%= student.last_name %></td>
+            <td><%= student.course %></td>
+            <td><%= student.year_level %></td>
+            <td><%= student.email %></td>
+          </tr>
+          <% }); %>
+        </table>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
-
-<form action="/students/search" method="GET">
-    <input
-        type="text"
-        name="keyword"
-        placeholder="Search student..."
-    >
-    <button type="submit">
-        Search
-    </button>
-</form>
