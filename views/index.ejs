@@ -51,8 +51,11 @@
             </div>
             </td>
           </tr>
-          <% }); %>
+        <% }); %>
         </table>
+        <% if (students.length === 0) { %>
+          <p>No matching records found.</p>
+        <% } %>
       </div>
     </div>
   </main>
