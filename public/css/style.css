@@ -150,6 +150,11 @@ tr:nth-child(even) td {
   background: #7f1d1d;
 }
 
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
 @media (max-width: 600px) {
   .toolbar,
   .search-form {

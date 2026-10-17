@@ -42,10 +42,13 @@
             <td><%= student.year_level %></td>
             <td><%= student.email %></td>
             <td>
-            <form class="inline-form" action="/students/delete/<%= student.id %>" method="POST"
+            <div class="actions">
+                <a class="btn btn-small" href="/students/edit/<%= student.id %>">Edit</a>
+                <form class="inline-form" action="/students/delete/<%= student.id %>" method="POST"
                     onsubmit="return confirm('Delete this student?');">
                 <button class="btn btn-danger btn-small" type="submit">Delete</button>
-            </form>
+                </form>
+            </div>
             </td>
           </tr>
           <% }); %>
