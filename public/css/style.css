@@ -133,6 +133,23 @@ tr:nth-child(even) td {
   border-radius: 4px;
 }
 
+.inline-form {
+  margin: 0;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+.btn-danger {
+  background: #b91c1c;
+}
+
+.btn-danger:hover {
+  background: #7f1d1d;
+}
+
 @media (max-width: 600px) {
   .toolbar,
   .search-form {
